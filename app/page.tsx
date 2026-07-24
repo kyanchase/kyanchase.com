@@ -104,13 +104,11 @@ export default function Home() {
           <h2 id="about-title">Kyan Chase</h2>
           <div className="about-copy">
             <p>
-              Kyan Chase is a photographer and multidisciplinary maker. His
-              work finds quiet relationships between architecture, texture,
-              light, and negative space.
-            </p>
-            <p>
-              Working across film photography, photograms, music, and
-              technology, he is interested in structure emerging from chance.
+              I&apos;m Kyan Chase, a photographer and software developer based
+              in Salt Lake City. I enjoy exploring new ways of making
+              things—whether that&apos;s through film photography, darkroom
+              experimentation, music, or code. This website is a collection of
+              those projects as they continue to evolve.
             </p>
           </div>
         </div>
