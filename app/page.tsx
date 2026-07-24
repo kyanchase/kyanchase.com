@@ -1,31 +1,31 @@
 const photographs = [
   {
-    src: "/work/01-architecture-curves.jpeg",
+    src: "./work/01-architecture-curves.jpeg",
     alt: "Curving light and dark architectural walls against an open sky",
     number: "01",
   },
   {
-    src: "/work/03-broken-windshield.jpeg",
+    src: "./work/03-broken-windshield.jpeg",
     alt: "The interior of an abandoned vehicle seen through a shattered windshield",
     number: "02",
   },
   {
-    src: "/work/02-tree-architecture.jpeg",
+    src: "./work/02-tree-architecture.jpeg",
     alt: "A flowering tree framed by a geometric building and overhanging roof",
     number: "03",
   },
   {
-    src: "/work/04-peeling-steel.jpeg",
+    src: "./work/04-peeling-steel.jpeg",
     alt: "Peeling paint and hardware across a textured steel surface",
     number: "04",
   },
   {
-    src: "/work/05-industrial-wall.jpeg",
+    src: "./work/05-industrial-wall.jpeg",
     alt: "Graffiti, handles, shadows, and worn paint on an industrial wall",
     number: "05",
   },
   {
-    src: "/work/06-under-structure.jpeg",
+    src: "./work/06-under-structure.jpeg",
     alt: "A low view beneath a decaying structure with a beam suspended above debris",
     number: "06",
   },
@@ -33,37 +33,37 @@ const photographs = [
 
 const photograms = [
   {
-    src: "/photograms/01-cassette-grid.jpg",
+    src: "./photograms/01-cassette-grid.jpg",
     alt: "A high-contrast photogram composed from overlapping cassette tapes",
     number: "01",
   },
   {
-    src: "/photograms/02-organic-negative-dark.jpg",
+    src: "./photograms/02-organic-negative-dark.jpg",
     alt: "A dark organic photogram filled with rings, bubbles, and granular marks",
     number: "02",
   },
   {
-    src: "/photograms/03-organic-negative-light.jpg",
+    src: "./photograms/03-organic-negative-light.jpg",
     alt: "A light organic photogram with dark droplets and circular voids",
     number: "03",
   },
   {
-    src: "/photograms/04-liquid-study.jpg",
+    src: "./photograms/04-liquid-study.jpg",
     alt: "An abstract photogram of flowing cellular forms and textured residue",
     number: "04",
   },
   {
-    src: "/photograms/05-loop-study.jpg",
+    src: "./photograms/05-loop-study.jpg",
     alt: "An abstract photogram of translucent loops against a dark ground",
     number: "05",
   },
   {
-    src: "/photograms/06-folded-paper.jpg",
+    src: "./photograms/06-folded-paper.jpg",
     alt: "A dark photogram of layered folded paper forms",
     number: "06",
   },
   {
-    src: "/photograms/07-line-study.jpg",
+    src: "./photograms/07-line-study.jpg",
     alt: "A sparse photogram of hand-drawn black lines on a white ground",
     number: "07",
   },
@@ -98,7 +98,7 @@ export default function Home() {
         </div>
         <figure className="hero-image">
           <img
-            src="/work/01-architecture-curves.jpeg"
+            src="./work/01-architecture-curves.jpeg"
             alt="Curving light and dark architectural walls against an open sky"
           />
         </figure>
