@@ -240,6 +240,108 @@ figcaption {
   padding: clamp(6rem, 12vw, 12rem) var(--pad);
 }
 
+.photograms {
+  background: #d8d5cc;
+  color: var(--ink);
+  padding: clamp(6rem, 12vw, 12rem) var(--pad);
+}
+
+.photograms-intro {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: clamp(5rem, 10vw, 10rem);
+}
+
+.photograms-intro .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.photograms-intro h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.photograms-intro > p:not(.eyebrow, .archive-note) {
+  align-self: end;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.4rem, 2.4vw, 2.4rem);
+  line-height: 1.2;
+  margin: 0;
+  max-width: 38rem;
+}
+
+.archive-note {
+  border-top: 1px solid #aaa69d;
+  font-size: 0.62rem;
+  grid-column: 2;
+  letter-spacing: 0.13em;
+  margin: 1rem 0 0;
+  padding-top: 0.75rem;
+  text-transform: uppercase;
+}
+
+.photogram-grid {
+  align-items: start;
+  display: grid;
+  gap: clamp(4rem, 9vw, 10rem) clamp(2rem, 6vw, 7rem);
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.photogram-item {
+  margin: 0;
+}
+
+.photogram-mat {
+  background: #e9e7e0;
+  padding: clamp(0.5rem, 1vw, 0.85rem);
+}
+
+.photogram-item img {
+  height: auto;
+  object-fit: contain;
+}
+
+.photogram-item-1 {
+  grid-column: 1 / span 7;
+}
+
+.photogram-item-2 {
+  grid-column: 9 / span 4;
+  margin-top: clamp(5rem, 10vw, 10rem);
+}
+
+.photogram-item-3 {
+  grid-column: 2 / span 4;
+}
+
+.photogram-item-4 {
+  grid-column: 7 / span 6;
+}
+
+.photogram-item-5 {
+  grid-column: 1 / span 7;
+}
+
+.photogram-item-6 {
+  grid-column: 9 / span 4;
+  margin-top: clamp(4rem, 8vw, 8rem);
+}
+
+.photogram-item-7 {
+  grid-column: 4 / span 6;
+}
+
+.photogram-item figcaption {
+  border-top: 1px solid #aaa69d;
+  margin-top: 0.35rem;
+}
+
 .about-grid {
   display: grid;
   gap: 3rem;
@@ -316,11 +418,17 @@ footer > a:last-child {
   }
 
   .section-intro,
-  .about-grid {
+  .about-grid,
+  .photograms-intro {
     grid-template-columns: 1fr;
   }
 
-  .section-intro .eyebrow {
+  .section-intro .eyebrow,
+  .photograms-intro .eyebrow {
+    grid-column: auto;
+  }
+
+  .archive-note {
     grid-column: auto;
   }
 
@@ -337,6 +445,19 @@ footer > a:last-child {
   }
 
   .gallery-item-6 {
+    margin-top: 0;
+  }
+
+  .photogram-grid {
+    display: block;
+  }
+
+  .photogram-item {
+    margin: 0 0 5rem;
+  }
+
+  .photogram-item-2,
+  .photogram-item-6 {
     margin-top: 0;
   }
 
