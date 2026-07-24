@@ -5,13 +5,13 @@ const photographs = [
     number: "01",
   },
   {
-    src: "/work/02-tree-architecture.jpeg",
-    alt: "A flowering tree framed by a geometric building and overhanging roof",
+    src: "/work/03-broken-windshield.jpeg",
+    alt: "The interior of an abandoned vehicle seen through a shattered windshield",
     number: "02",
   },
   {
-    src: "/work/03-broken-windshield.jpeg",
-    alt: "The interior of an abandoned vehicle seen through a shattered windshield",
+    src: "/work/02-tree-architecture.jpeg",
+    alt: "A flowering tree framed by a geometric building and overhanging roof",
     number: "03",
   },
   {

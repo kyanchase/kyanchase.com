@@ -308,7 +308,7 @@ figcaption {
 }
 
 .gallery-item-4 {
-  grid-column: 3 / span 8;
+  grid-column: 4 / span 6;
 }
 
 .gallery-item-5 {
@@ -330,9 +330,24 @@ figcaption {
 }
 
 .photograms {
-  background: #d8d5cc;
-  color: var(--ink);
-  padding: clamp(6rem, 12vw, 12rem) var(--pad) 0;
+  background:
+    radial-gradient(circle at 82% 16%, #353535 0, transparent 30%),
+    radial-gradient(circle at 18% 72%, #292929 0, transparent 32%),
+    #101010;
+  color: var(--paper);
+  overflow: hidden;
+  padding: clamp(6rem, 12vw, 12rem) var(--pad);
+  position: relative;
+}
+
+.photograms::before {
+  background:
+    linear-gradient(58deg, transparent 0 31%, rgb(255 255 255 / 5%) 31.1% 31.25%, transparent 31.35%),
+    linear-gradient(122deg, transparent 0 71%, rgb(255 255 255 / 4%) 71.1% 71.25%, transparent 71.35%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 .photograms-intro {
@@ -340,6 +355,7 @@ figcaption {
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
   margin-bottom: clamp(5rem, 10vw, 10rem);
+  position: relative;
 }
 
 .photograms-intro .eyebrow {
@@ -366,7 +382,7 @@ figcaption {
 }
 
 .archive-note {
-  border-top: 1px solid #aaa69d;
+  border-top: 1px solid #454541;
   font-size: 0.62rem;
   grid-column: 2;
   letter-spacing: 0.13em;
@@ -376,73 +392,72 @@ figcaption {
 }
 
 .photogram-grid {
-  counter-reset: photogram;
+  align-items: start;
+  display: grid;
+  gap: clamp(5rem, 11vw, 12rem) clamp(2rem, 7vw, 8rem);
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
 }
 
 .photogram-item {
-  align-items: center;
-  display: grid;
-  min-height: 115svh;
   margin: 0;
-  position: relative;
-  view-timeline-axis: block;
-  view-timeline-name: --photogram;
 }
 
 .photogram-mat {
-  background: #e9e7e0;
-  box-shadow: 0 2rem 5rem rgb(17 17 15 / 12%);
-  display: grid;
-  height: min(76svh, 52rem);
-  margin: 0 auto;
-  padding: clamp(0.55rem, 1vw, 0.9rem);
-  place-items: center;
-  position: sticky;
-  top: 12svh;
-  width: min(100%, 68rem);
+  background: #282826;
+  border: 1px solid rgb(240 238 232 / 13%);
+  box-shadow: 0 2rem 6rem rgb(0 0 0 / 42%);
+  padding: clamp(0.5rem, 1vw, 0.85rem);
+  transition:
+    border-color 220ms ease,
+    transform 320ms ease;
 }
 
 .photogram-item img {
-  height: 100%;
+  height: auto;
   object-fit: contain;
 }
 
-.photogram-item figcaption {
-  bottom: calc(12svh + 1.25rem);
-  font-variant-numeric: tabular-nums;
-  left: 1.25rem;
-  padding: 0;
-  position: sticky;
-  width: max-content;
+.photogram-item:hover .photogram-mat {
+  border-color: rgb(240 238 232 / 36%);
+  transform: translateY(-0.5rem);
 }
 
-@supports (animation-timeline: view()) {
-  .photogram-mat {
-    animation: photogram-reveal both linear;
-    animation-range: entry 8% cover 92%;
-    animation-timeline: --photogram;
-  }
+.photogram-item-1 {
+  grid-column: 1 / span 7;
+}
 
-  @keyframes photogram-reveal {
-    0% {
-      filter: blur(8px);
-      opacity: 0;
-      transform: scale(0.92);
-    }
+.photogram-item-2 {
+  grid-column: 9 / span 4;
+  margin-top: clamp(5rem, 10vw, 10rem);
+}
 
-    22%,
-    72% {
-      filter: blur(0);
-      opacity: 1;
-      transform: scale(1);
-    }
+.photogram-item-3 {
+  grid-column: 2 / span 4;
+}
 
-    100% {
-      filter: blur(5px);
-      opacity: 0;
-      transform: scale(0.96);
-    }
-  }
+.photogram-item-4 {
+  grid-column: 7 / span 6;
+}
+
+.photogram-item-5 {
+  grid-column: 1 / span 7;
+}
+
+.photogram-item-6 {
+  grid-column: 9 / span 4;
+  margin-top: clamp(4rem, 8vw, 8rem);
+}
+
+.photogram-item-7 {
+  grid-column: 4 / span 6;
+}
+
+.photogram-item figcaption {
+  border-top: 1px solid #454541;
+  color: #9b9992;
+  font-variant-numeric: tabular-nums;
+  margin-top: 0.35rem;
 }
 
 .about-grid {
@@ -563,13 +578,17 @@ footer > a:last-child {
     margin-top: 0;
   }
 
-  .photogram-item {
-    min-height: 110svh;
+  .photogram-grid {
+    display: block;
   }
 
-  .photogram-mat {
-    height: 72svh;
-    top: 14svh;
+  .photogram-item {
+    margin: 0 0 5rem;
+  }
+
+  .photogram-item-2,
+  .photogram-item-6 {
+    margin-top: 0;
   }
 
   footer {
@@ -586,7 +605,4 @@ footer > a:last-child {
     scroll-behavior: auto;
   }
 
-  .photogram-mat {
-    animation: none;
-  }
 }
