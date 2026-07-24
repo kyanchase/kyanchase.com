@@ -78,17 +78,50 @@ footer a:hover,
 }
 
 .hero {
+  align-items: center;
+  background:
+    radial-gradient(circle at 50% 46%, #454545 0, #242424 28%, #101010 67%),
+    #101010;
+  color: #f0eee8;
   display: grid;
-  gap: clamp(2rem, 5vw, 6rem);
-  grid-template-columns: minmax(16rem, 0.72fr) minmax(19rem, 1fr);
+  isolation: isolate;
+  justify-items: center;
   min-height: 100svh;
-  padding: clamp(7rem, 13vh, 9rem) var(--pad) 3rem;
+  overflow: hidden;
+  padding: clamp(6rem, 10vh, 8rem) var(--pad) clamp(5rem, 8vh, 7rem);
   position: relative;
 }
 
+.hero::before,
+.hero::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+}
+
+.hero::before {
+  background:
+    linear-gradient(115deg, transparent 0 42%, rgb(255 255 255 / 6%) 42.1% 42.35%, transparent 42.45%),
+    linear-gradient(65deg, transparent 0 66%, rgb(255 255 255 / 5%) 66.1% 66.35%, transparent 66.45%);
+  inset: 0;
+  z-index: 0;
+}
+
+.hero::after {
+  border: 1px solid rgb(255 255 255 / 10%);
+  height: min(86vw, 88svh);
+  left: 50%;
+  rotate: 45deg;
+  top: 50%;
+  translate: -50% -50%;
+  width: min(86vw, 88svh);
+  z-index: 0;
+}
+
 .hero-copy {
-  align-self: center;
-  max-width: 35rem;
+  inset: 0;
+  position: absolute;
+  z-index: 1;
 }
 
 .eyebrow {
@@ -106,29 +139,66 @@ p {
 
 h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.75rem, 8.8vw, 9.2rem);
+  font-size: clamp(4rem, 12vw, 12rem);
   font-weight: 400;
-  letter-spacing: -0.065em;
-  line-height: 0.82;
-  margin-bottom: 2.5rem;
+  letter-spacing: -0.075em;
+  line-height: 0.75;
+  margin: 0;
+}
+
+.hero h1 span {
+  color: rgb(240 238 232 / 18%);
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.hero h1 span:first-child {
+  left: -0.04em;
+  top: 17%;
+}
+
+.hero h1 span:nth-child(2) {
+  right: -0.03em;
+  top: 44%;
+}
+
+.hero h1 span:last-child {
+  bottom: 8%;
+  left: 2%;
 }
 
 .hero-note {
-  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
-  line-height: 1.55;
-  max-width: 25rem;
+  bottom: 2.4rem;
+  font-size: 0.66rem;
+  left: var(--pad);
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 21rem;
+  position: absolute;
+  text-transform: uppercase;
 }
 
 .hero-image {
-  align-self: center;
   margin: 0;
-  max-width: min(69vh, 48vw);
-  justify-self: end;
-  width: 100%;
+  position: relative;
+  width: min(68vw, 72svh);
+  z-index: 2;
+}
+
+.hero-image::before {
+  border: 1px solid rgb(255 255 255 / 20%);
+  content: "";
+  inset: clamp(-1.6rem, -2vw, -0.8rem);
+  position: absolute;
+  z-index: -1;
 }
 
 .hero-image img {
   aspect-ratio: 1 / 1;
+  box-shadow:
+    0 2.5rem 7rem rgb(0 0 0 / 65%),
+    0 0 4rem rgb(255 255 255 / 8%);
   object-fit: cover;
 }
 
@@ -142,13 +212,14 @@ figcaption {
 
 .scroll-cue {
   align-items: center;
-  bottom: 2.6rem;
+  bottom: 2.4rem;
   display: flex;
   font-size: 0.66rem;
   gap: 0.75rem;
-  left: var(--pad);
+  left: auto;
   letter-spacing: 0.13em;
   position: absolute;
+  right: var(--pad);
   text-transform: uppercase;
 }
 
@@ -406,28 +477,40 @@ footer > a:last-child {
   }
 
   .hero {
-    display: flex;
-    flex-direction: column;
-    gap: 2.75rem;
-    min-height: auto;
-    padding-bottom: 5.5rem;
-  }
-
-  .hero-copy {
-    align-self: auto;
+    min-height: 100svh;
+    padding: 5.5rem 1.4rem 7rem;
   }
 
   h1 {
-    font-size: clamp(3.6rem, 18vw, 6rem);
-    margin-bottom: 1.75rem;
+    font-size: clamp(3.8rem, 21vw, 7rem);
   }
 
   .hero-image {
-    max-width: none;
+    width: min(86vw, 68svh);
   }
 
   .scroll-cue {
-    display: none;
+    bottom: 1.5rem;
+    left: auto;
+    right: 1.4rem;
+  }
+
+  .hero-note {
+    bottom: 1.5rem;
+    left: 1.4rem;
+    max-width: 13rem;
+  }
+
+  .hero h1 span:first-child {
+    top: 18%;
+  }
+
+  .hero h1 span:nth-child(2) {
+    top: 48%;
+  }
+
+  .hero h1 span:last-child {
+    bottom: 12%;
   }
 
   .section-intro,

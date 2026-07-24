@@ -85,11 +85,10 @@ export default function Home() {
 
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow">Photographs · 2026</p>
           <h1 id="hero-title">
-            Form,
-            <br />
-            light &amp; space.
+            <span>Form</span>
+            <span>Light</span>
+            <span>Space</span>
           </h1>
           <p className="hero-note">
             Black-and-white photographs exploring the tension between the
@@ -101,9 +100,6 @@ export default function Home() {
             src="/work/01-architecture-curves.jpeg"
             alt="Curving light and dark architectural walls against an open sky"
           />
-          <figcaption>
-            <span>01</span>
-          </figcaption>
         </figure>
         <a className="scroll-cue" href="#work">
           View selected work <span aria-hidden="true">↓</span>
