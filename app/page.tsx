@@ -36,43 +36,36 @@ const photograms = [
     src: "/photograms/01-cassette-grid.jpg",
     alt: "A high-contrast photogram composed from overlapping cassette tapes",
     number: "01",
-    process: "Cassette tapes",
   },
   {
     src: "/photograms/02-organic-negative-dark.jpg",
     alt: "A dark organic photogram filled with rings, bubbles, and granular marks",
     number: "02",
-    process: "Liquid study",
   },
   {
     src: "/photograms/03-organic-negative-light.jpg",
     alt: "A light organic photogram with dark droplets and circular voids",
     number: "03",
-    process: "Liquid study",
   },
   {
     src: "/photograms/04-liquid-study.jpg",
     alt: "An abstract photogram of flowing cellular forms and textured residue",
     number: "04",
-    process: "Organic negative",
   },
   {
     src: "/photograms/05-loop-study.jpg",
     alt: "An abstract photogram of translucent loops against a dark ground",
     number: "05",
-    process: "Material study",
   },
   {
     src: "/photograms/06-folded-paper.jpg",
     alt: "A dark photogram of layered folded paper forms",
     number: "06",
-    process: "Folded paper",
   },
   {
     src: "/photograms/07-line-study.jpg",
     alt: "A sparse photogram of hand-drawn black lines on a white ground",
     number: "07",
-    process: "Line study",
   },
 ];
 
@@ -109,8 +102,7 @@ export default function Home() {
             alt="Curving light and dark architectural walls against an open sky"
           />
           <figcaption>
-            <span>Untitled</span>
-            <span>Silver gelatin / medium format</span>
+            <span>01</span>
           </figcaption>
         </figure>
         <a className="scroll-cue" href="#work">
@@ -137,7 +129,6 @@ export default function Home() {
               <img src={photo.src} alt={photo.alt} loading="lazy" />
               <figcaption>
                 <span>{photo.number}</span>
-                <span>Untitled</span>
               </figcaption>
             </figure>
           ))}
@@ -174,10 +165,7 @@ export default function Home() {
                   loading="lazy"
                 />
               </div>
-              <figcaption>
-                <span>{photogram.number}</span>
-                <span>{photogram.process}</span>
-              </figcaption>
+              <figcaption aria-hidden="true">{photogram.number}</figcaption>
             </figure>
           ))}
         </div>
