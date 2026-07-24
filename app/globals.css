@@ -36,6 +36,7 @@ img {
 
 .site-header {
   align-items: center;
+  color: var(--paper);
   display: flex;
   justify-content: space-between;
   left: 0;
@@ -53,9 +54,27 @@ img {
   text-transform: uppercase;
 }
 
+.site-header .wordmark {
+  align-items: baseline;
+  display: inline-flex;
+  text-shadow: 0 1px 1rem rgb(0 0 0 / 75%);
+}
+
+.wordmark-initial {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 0;
+}
+
 nav {
   display: flex;
   gap: 1.75rem;
+}
+
+.site-header nav {
+  text-shadow: 0 1px 1rem rgb(0 0 0 / 75%);
 }
 
 nav a,

@@ -74,7 +74,8 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Kyan Chase, home">
-          Kyan Chase
+          <span className="wordmark-initial">K</span>YAN{" "}
+          <span className="wordmark-initial">C</span>HASE
         </a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
