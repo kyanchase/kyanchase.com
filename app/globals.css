@@ -57,20 +57,27 @@ img {
 .site-header .wordmark {
   align-items: baseline;
   display: inline-flex;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  left: 50%;
+  letter-spacing: 0.22em;
+  position: absolute;
   text-shadow: 0 1px 1rem rgb(0 0 0 / 75%);
+  transform: translateX(-50%);
 }
 
 .wordmark-initial {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.45em;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 1.28em;
+  font-weight: 400;
+  letter-spacing: 0.12em;
   line-height: 0;
 }
 
 nav {
   display: flex;
   gap: 1.75rem;
+  margin-left: auto;
 }
 
 .site-header nav {
@@ -503,11 +510,21 @@ footer > a:last-child {
 
 @media (max-width: 760px) {
   .site-header {
+    align-items: center;
+    flex-direction: column;
+    gap: 1.15rem;
     padding-top: 1.15rem;
+  }
+
+  .site-header .wordmark {
+    left: auto;
+    position: relative;
+    transform: none;
   }
 
   nav {
     gap: 1.1rem;
+    margin-left: 0;
   }
 
   .hero {
