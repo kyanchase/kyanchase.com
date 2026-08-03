@@ -110,7 +110,7 @@ export default function Home() {
       <section className="work" id="work" aria-labelledby="work-title">
         <div className="section-intro">
           <p className="eyebrow">Selected work</p>
-          <h2 id="work-title">Six photographs</h2>
+          <h2 id="work-title">Five selected photographs</h2>
           <p>
             Geometry, texture, and human traces—held together by the space
             around them.
