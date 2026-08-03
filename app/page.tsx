@@ -33,8 +33,8 @@ const photographs = [
 
 const photograms = [
   {
-    src: "./photograms/01-cassette-grid.jpg",
-    alt: "A high-contrast photogram composed from overlapping cassette tapes",
+    src: "./photograms/04-liquid-study.jpg",
+    alt: "An abstract photogram of flowing cellular forms and textured residue",
     number: "01",
   },
   {
@@ -48,8 +48,8 @@ const photograms = [
     number: "03",
   },
   {
-    src: "./photograms/04-liquid-study.jpg",
-    alt: "An abstract photogram of flowing cellular forms and textured residue",
+    src: "./photograms/01-cassette-grid.jpg",
+    alt: "A high-contrast photogram composed from overlapping cassette tapes",
     number: "04",
   },
   {
