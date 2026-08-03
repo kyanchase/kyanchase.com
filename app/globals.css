@@ -488,6 +488,85 @@ figcaption {
   margin-top: 2rem;
 }
 
+.social-links {
+  border-top: 1px solid var(--line);
+  display: grid;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.social-links a {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.5rem 1fr;
+  padding: 1rem 0;
+  transition:
+    color 180ms ease,
+    padding-left 180ms ease;
+}
+
+.social-links a:hover {
+  padding-left: 0.35rem;
+}
+
+.social-links a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.social-links a > span:last-child {
+  align-items: baseline;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.social-links strong {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.social-links small {
+  color: var(--muted);
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.instagram-mark {
+  border: 1.5px solid currentColor;
+  border-radius: 0.4rem;
+  display: block;
+  height: 1.25rem;
+  position: relative;
+  width: 1.25rem;
+}
+
+.instagram-mark::before {
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  content: "";
+  height: 0.42rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.42rem;
+}
+
+.instagram-mark::after {
+  background: currentColor;
+  border-radius: 50%;
+  content: "";
+  height: 0.15rem;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.2rem;
+  width: 0.15rem;
+}
+
 footer {
   align-items: center;
   border-top: 1px solid var(--line);

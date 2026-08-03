@@ -180,6 +180,44 @@ export default function Home() {
               experimentation, music, or code. This website is a collection of
               those projects as they continue to evolve.
             </p>
+            <div className="social-links" aria-label="Kyan's Instagram profiles">
+              <a
+                href="https://www.instagram.com/kyanchase_/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Kyan Chase on Instagram, main account"
+              >
+                <span className="instagram-mark" aria-hidden="true" />
+                <span>
+                  <strong>@kyanchase_</strong>
+                  <small>Main</small>
+                </span>
+              </a>
+              <a
+                href="https://www.instagram.com/kyan.mp4/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Kyan dot MP4 on Instagram, video edits"
+              >
+                <span className="instagram-mark" aria-hidden="true" />
+                <span>
+                  <strong>@kyan.mp4</strong>
+                  <small>Video + edits</small>
+                </span>
+              </a>
+              <a
+                href="https://www.instagram.com/kyanscamera/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Kyan's Camera on Instagram, photography"
+              >
+                <span className="instagram-mark" aria-hidden="true" />
+                <span>
+                  <strong>@kyanscamera</strong>
+                  <small>Photography</small>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
