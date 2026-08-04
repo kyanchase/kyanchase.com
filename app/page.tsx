@@ -180,7 +180,17 @@ export default function Home() {
               experimentation, music, or code. This website is a collection of
               those projects as they continue to evolve.
             </p>
-            <div className="social-links" aria-label="Kyan's Instagram profiles">
+            <div className="social-links" aria-label="Contact Kyan">
+              <a
+                href="mailto:create@kyanchase.com"
+                aria-label="Email Kyan at create at kyanchase dot com"
+              >
+                <span className="mail-mark" aria-hidden="true" />
+                <span>
+                  <strong>create@kyanchase.com</strong>
+                  <small>Email</small>
+                </span>
+              </a>
               <a
                 href="https://www.instagram.com/kyanchase_/"
                 target="_blank"

@@ -567,6 +567,33 @@ figcaption {
   width: 0.15rem;
 }
 
+.mail-mark {
+  border: 1.5px solid currentColor;
+  display: block;
+  height: 0.9rem;
+  position: relative;
+  width: 1.25rem;
+}
+
+.mail-mark::before,
+.mail-mark::after {
+  border-top: 1.5px solid currentColor;
+  content: "";
+  position: absolute;
+  top: 0.18rem;
+  width: 0.69rem;
+}
+
+.mail-mark::before {
+  left: 0.03rem;
+  rotate: 32deg;
+}
+
+.mail-mark::after {
+  right: 0.03rem;
+  rotate: -32deg;
+}
+
 footer {
   align-items: center;
   border-top: 1px solid var(--line);
