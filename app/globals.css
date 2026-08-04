@@ -68,7 +68,7 @@ img {
   align-items: baseline;
   display: inline-flex;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.9rem;
+  font-size: 1.04rem;
   font-weight: 400;
   left: 50%;
   letter-spacing: 0.22em;
@@ -198,6 +198,17 @@ footer a:hover,
   width: 120vw;
 }
 
+.hero-geometry span:nth-child(5) {
+  background: rgb(255 255 255 / 8%);
+  bottom: -8rem;
+  height: 20rem;
+  left: 76%;
+  rotate: -32deg;
+  top: auto;
+  translate: none;
+  width: 1px;
+}
+
 .eyebrow {
   font-size: 0.66rem;
   letter-spacing: 0.2em;
@@ -267,7 +278,9 @@ figcaption {
 .work {
   background: var(--ink);
   color: var(--paper);
+  overflow: hidden;
   padding: clamp(5rem, 10vw, 10rem) var(--pad);
+  position: relative;
 }
 
 .section-intro {
@@ -275,6 +288,8 @@ figcaption {
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
   margin-bottom: clamp(5rem, 10vw, 11rem);
+  position: relative;
+  z-index: 1;
 }
 
 .section-intro .eyebrow {
@@ -305,6 +320,8 @@ figcaption {
   display: grid;
   gap: clamp(5rem, 12vw, 13rem) clamp(2rem, 7vw, 8rem);
   grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  z-index: 1;
 }
 
 .gallery-item {
@@ -371,6 +388,108 @@ figcaption {
   inset: 0;
   pointer-events: none;
   position: absolute;
+}
+
+.section-geometry {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.section-geometry span {
+  background: rgb(240 238 232 / 6%);
+  height: 1px;
+  position: absolute;
+  transform-origin: left center;
+}
+
+.about-geometry span:first-child {
+  left: 76%;
+  rotate: 32deg;
+  top: 0;
+  width: 58vw;
+}
+
+.about-geometry span:nth-child(2) {
+  right: -5vw;
+  rotate: 145deg;
+  top: 43%;
+  width: 72vw;
+}
+
+.about-geometry span:last-child {
+  bottom: 0;
+  left: 32%;
+  rotate: -24deg;
+  width: 58vw;
+}
+
+.work-geometry span:first-child {
+  left: 32%;
+  rotate: 24deg;
+  top: 0;
+  width: 76vw;
+}
+
+.work-geometry span:nth-child(2) {
+  right: -16vw;
+  rotate: 151deg;
+  top: 28%;
+  width: 92vw;
+}
+
+.work-geometry span:last-child {
+  bottom: 0;
+  left: 18%;
+  rotate: -17deg;
+  width: 88vw;
+}
+
+.photograms-geometry span:first-child {
+  left: 18%;
+  rotate: 17deg;
+  top: 0;
+  width: 96vw;
+}
+
+.photograms-geometry span:nth-child(2) {
+  right: -22vw;
+  rotate: 157deg;
+  top: 34%;
+  width: 108vw;
+}
+
+.photograms-geometry span:last-child {
+  bottom: 0;
+  left: 10%;
+  rotate: -11deg;
+  width: 105vw;
+}
+
+.standalone-section .section-geometry span {
+  background: rgb(240 238 232 / 5%);
+}
+
+.standalone-section .section-geometry span:first-child {
+  left: -12vw;
+  rotate: 14deg;
+  top: 12rem;
+  width: 88vw;
+}
+
+.standalone-section .section-geometry span:nth-child(2) {
+  left: 58%;
+  rotate: 63deg;
+  top: 6rem;
+  width: 70vw;
+}
+
+.standalone-section .section-geometry span:last-child {
+  left: 8%;
+  rotate: -21deg;
+  top: 58%;
+  width: 112vw;
 }
 
 .photograms {
@@ -442,6 +561,7 @@ figcaption {
   gap: clamp(5rem, 11vw, 12rem) clamp(2rem, 7vw, 8rem);
   grid-template-columns: repeat(12, 1fr);
   position: relative;
+  z-index: 1;
 }
 
 .photogram-item {
@@ -510,10 +630,12 @@ figcaption {
   gap: 3rem;
   grid-template-columns: 1fr 1fr;
   position: relative;
+  z-index: 1;
 }
 
 .about > .eyebrow {
   position: relative;
+  z-index: 1;
 }
 
 .about-copy {
@@ -683,6 +805,7 @@ footer > a:last-child {
   }
 
   .site-header .wordmark {
+    font-size: 0.96rem;
     left: auto;
     position: relative;
     transform: none;
@@ -723,6 +846,14 @@ footer > a:last-child {
   .hero-geometry span:nth-child(2) {
     height: 82vw;
     width: 82vw;
+  }
+
+  .hero-geometry span:nth-child(5) {
+    left: 82%;
+  }
+
+  .section-geometry span {
+    opacity: 0.8;
   }
 
   .section-intro,

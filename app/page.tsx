@@ -8,7 +8,7 @@ import {
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <SiteHeader />
 
       <section className="hero" id="top" aria-labelledby="hero-title">
@@ -16,6 +16,7 @@ export default function Home() {
           Kyan Chase
         </h1>
         <div className="hero-geometry" aria-hidden="true">
+          <span />
           <span />
           <span />
           <span />

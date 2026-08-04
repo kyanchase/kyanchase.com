@@ -88,6 +88,11 @@ export function SiteHeader() {
 export function AboutSection() {
   return (
     <section className="about" id="about" aria-labelledby="about-title">
+      <div className="section-geometry about-geometry" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
       <p className="eyebrow">About</p>
       <div className="about-grid">
         <h2 id="about-title">Kyan Chase</h2>
@@ -155,7 +160,16 @@ export function AboutSection() {
 
 export function WorkSection({ standalone = false }: { standalone?: boolean }) {
   return (
-    <section className="work" id="work" aria-labelledby="work-title">
+    <section
+      className={`work${standalone ? " standalone-section" : ""}`}
+      id="work"
+      aria-labelledby="work-title"
+    >
+      <div className="section-geometry work-geometry" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
       <div className="section-intro">
         <p className="eyebrow">Selected work</p>
         {standalone ? (
@@ -195,10 +209,15 @@ export function PhotogramsSection({
 }) {
   return (
     <section
-      className="photograms"
+      className={`photograms${standalone ? " standalone-section" : ""}`}
       id="photograms"
       aria-labelledby="photograms-title"
     >
+      <div className="section-geometry photograms-geometry" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
       <div className="photograms-intro">
         <p className="eyebrow">Darkroom experiments</p>
         {standalone ? (
