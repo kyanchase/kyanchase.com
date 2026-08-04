@@ -12,12 +12,14 @@ export default function Home() {
       <SiteHeader />
 
       <section className="hero" id="top" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <h1 id="hero-title">
-            <span>Form</span>
-            <span>Light</span>
-            <span>Space</span>
-          </h1>
+        <h1 className="visually-hidden" id="hero-title">
+          Kyan Chase
+        </h1>
+        <div className="hero-geometry" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span />
         </div>
         <figure className="hero-image">
           <img

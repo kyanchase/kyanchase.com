@@ -34,6 +34,16 @@ img {
   width: 100%;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .site-header {
   align-items: center;
   color: var(--paper);
@@ -127,27 +137,65 @@ footer a:hover,
 
 .hero::before {
   background:
-    linear-gradient(115deg, transparent 0 42%, rgb(255 255 255 / 6%) 42.1% 42.35%, transparent 42.45%),
-    linear-gradient(65deg, transparent 0 66%, rgb(255 255 255 / 5%) 66.1% 66.35%, transparent 66.45%);
+    linear-gradient(115deg, transparent 0 22%, rgb(255 255 255 / 5%) 22.1% 22.22%, transparent 22.32%),
+    linear-gradient(115deg, transparent 0 67%, rgb(255 255 255 / 4%) 67.1% 67.22%, transparent 67.32%),
+    linear-gradient(65deg, transparent 0 34%, rgb(255 255 255 / 5%) 34.1% 34.22%, transparent 34.32%),
+    linear-gradient(65deg, transparent 0 79%, rgb(255 255 255 / 4%) 79.1% 79.22%, transparent 79.32%);
   inset: 0;
   z-index: 0;
 }
 
 .hero::after {
   border: 1px solid rgb(255 255 255 / 10%);
-  height: min(86vw, 88svh);
+  height: min(72vw, 82svh);
   left: 50%;
   rotate: 45deg;
   top: 50%;
   translate: -50% -50%;
-  width: min(86vw, 88svh);
+  width: min(72vw, 82svh);
   z-index: 0;
 }
 
-.hero-copy {
+.hero-geometry {
   inset: 0;
+  pointer-events: none;
   position: absolute;
-  z-index: 1;
+  z-index: 0;
+}
+
+.hero-geometry span {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+.hero-geometry span:first-child {
+  border: 1px solid rgb(255 255 255 / 12%);
+  height: min(66svh, 44rem);
+  rotate: -5deg;
+  width: min(78vw, 72rem);
+}
+
+.hero-geometry span:nth-child(2) {
+  border: 1px solid rgb(255 255 255 / 8%);
+  height: min(58vw, 70svh);
+  rotate: 34deg;
+  width: min(58vw, 70svh);
+}
+
+.hero-geometry span:nth-child(3) {
+  background: rgb(255 255 255 / 7%);
+  height: 140svh;
+  rotate: 27deg;
+  width: 1px;
+}
+
+.hero-geometry span:last-child {
+  background: rgb(255 255 255 / 6%);
+  height: 1px;
+  rotate: -16deg;
+  width: 120vw;
 }
 
 .eyebrow {
@@ -170,27 +218,6 @@ h1 {
   letter-spacing: -0.075em;
   line-height: 0.75;
   margin: 0;
-}
-
-.hero h1 span {
-  color: rgb(240 238 232 / 18%);
-  position: absolute;
-  text-transform: uppercase;
-}
-
-.hero h1 span:first-child {
-  left: -0.04em;
-  top: 17%;
-}
-
-.hero h1 span:nth-child(2) {
-  right: -0.03em;
-  top: 44%;
-}
-
-.hero h1 span:last-child {
-  bottom: 8%;
-  left: 2%;
 }
 
 .hero-image {
@@ -327,7 +354,23 @@ figcaption {
 }
 
 .about {
+  background:
+    radial-gradient(circle at 18% 82%, #272725 0, transparent 32%),
+    #1b1b19;
+  color: var(--paper);
+  overflow: hidden;
   padding: clamp(6rem, 12vw, 12rem) var(--pad);
+  position: relative;
+}
+
+.about::before {
+  background:
+    linear-gradient(58deg, transparent 0 28%, rgb(255 255 255 / 4%) 28.1% 28.22%, transparent 28.32%),
+    linear-gradient(122deg, transparent 0 74%, rgb(255 255 255 / 4%) 74.1% 74.22%, transparent 74.32%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 .photograms {
@@ -466,6 +509,11 @@ figcaption {
   display: grid;
   gap: 3rem;
   grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.about > .eyebrow {
+  position: relative;
 }
 
 .about-copy {
@@ -487,6 +535,18 @@ figcaption {
   border-top: 1px solid var(--line);
   display: grid;
   margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.about .social-links {
+  border-color: #454541;
+}
+
+.about .social-links a {
+  border-color: #454541;
+}
+
+.about .social-links small {
+  color: #9b9992;
 }
 
 .social-links a {
@@ -645,10 +705,6 @@ footer > a:last-child {
     padding: 5.5rem 1.4rem 7rem;
   }
 
-  h1 {
-    font-size: clamp(3.8rem, 21vw, 7rem);
-  }
-
   .hero-image {
     width: min(86vw, 68svh);
   }
@@ -658,16 +714,15 @@ footer > a:last-child {
     bottom: 1rem;
   }
 
-  .hero h1 span:first-child {
-    top: 18%;
+  .hero-geometry span:first-child {
+    height: 62svh;
+    rotate: -7deg;
+    width: 94vw;
   }
 
-  .hero h1 span:nth-child(2) {
-    top: 48%;
-  }
-
-  .hero h1 span:last-child {
-    bottom: 12%;
+  .hero-geometry span:nth-child(2) {
+    height: 82vw;
+    width: 82vw;
   }
 
   .section-intro,
