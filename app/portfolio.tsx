@@ -69,6 +69,55 @@ const photograms = [
   },
 ];
 
+const motionPieces = [
+  {
+    id: "0NZzHDZAY4o",
+    title: "Holy Cross 2V — Fall 2025",
+    number: "01",
+  },
+  {
+    id: "kZ_E5kZpt1Q",
+    title: "Canon ES8600 Snowboard Edit",
+    number: "02",
+  },
+  {
+    id: "kFX31IhHYm0",
+    title: "Zermatt, Switzerland",
+    number: "03",
+  },
+  {
+    id: "pjRdRqaY3uI",
+    title: "Kyan Chase B2B Brandon Chase — House Music at the Tree House",
+    number: "04",
+  },
+  {
+    id: "Lw0_C670wqY",
+    title: "Garage Mix in a College Dorm — Kyan Chase B2B Jack Amyot",
+    number: "05",
+  },
+];
+
+const instagramThrowbacks = [
+  { shortcode: "CbMKr_RFzEp", title: "Waiting Room", number: "T01" },
+  {
+    shortcode: "CYOoQnnqpK3",
+    title: "New Year, Same Skiing",
+    number: "T02",
+  },
+  {
+    shortcode: "CXca2xclEn9",
+    title: "Silly Side Hitters ft. BFD",
+    number: "T03",
+  },
+  { shortcode: "CKM3wwAhtTW", title: "Throwback No. 4", number: "T04" },
+  {
+    shortcode: "CB6mzSeAY1Y",
+    title: "Making Cool Edits Again",
+    number: "T05",
+  },
+  { shortcode: "B4lZKJaAQja", title: "Slatt", number: "T06" },
+];
+
 export function SiteHeader() {
   return (
     <header className="site-header">
@@ -78,6 +127,7 @@ export function SiteHeader() {
       </a>
       <nav aria-label="Main navigation">
         <a href="/work/">Work</a>
+        <a href="/motion/">Motion</a>
         <a href="/photograms/">Photograms</a>
         <a href="/#about">About</a>
       </nav>
@@ -98,11 +148,11 @@ export function AboutSection() {
         <h2 id="about-title">Kyan Chase</h2>
         <div className="about-copy">
           <p>
-            I&apos;m Kyan Chase, a photographer and software developer based in
-            Salt Lake City. I enjoy exploring new ways of making things—whether
-            that&apos;s through film photography, darkroom experimentation,
-            music, or code. This website is a collection of those projects as
-            they continue to evolve.
+            I&apos;m Kyan Chase, a photographer, videographer, and software
+            developer based in Salt Lake City. I enjoy exploring new ways of
+            making things—whether that&apos;s through film photography, darkroom
+            experimentation, music, or code. This website is a collection of
+            those projects as they continue to evolve.
           </p>
           <div className="social-links" aria-label="Contact Kyan">
             <a
@@ -250,6 +300,81 @@ export function PhotogramsSection({
               />
             </div>
             <figcaption aria-hidden="true">{photogram.number}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function MotionSection({ standalone = false }: { standalone?: boolean }) {
+  return (
+    <section
+      className={`motion${standalone ? " standalone-section" : ""}`}
+      id="motion"
+      aria-labelledby="motion-title"
+    >
+      <div className="section-geometry motion-geometry" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
+      <div className="motion-intro">
+        <p className="eyebrow">Moving images</p>
+        {standalone ? (
+          <h1 className="section-title" id="motion-title">
+            Motion
+          </h1>
+        ) : (
+          <h2 id="motion-title">Motion</h2>
+        )}
+        <p>
+          Video edits, travel films, and recorded DJ sets.
+        </p>
+      </div>
+
+      <div className="motion-grid">
+        {motionPieces.map((piece) => (
+          <figure className="motion-item" key={piece.id}>
+            <div className="motion-frame">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${piece.id}?rel=0&modestbranding=1&playsinline=1`}
+                title={piece.title}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+            <figcaption>
+              <span>{piece.number}</span>
+              <span>{piece.title}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <div className="throwbacks-intro">
+        <p className="eyebrow">From the archive</p>
+        <h3>Throwbacks</h3>
+        <p>Early edits, experiments, and scenes worth keeping around.</p>
+      </div>
+
+      <div className="throwbacks-grid">
+        {instagramThrowbacks.map((piece) => (
+          <figure className="throwback-item" key={piece.shortcode}>
+            <div className="instagram-frame">
+              <iframe
+                src={`https://www.instagram.com/p/${piece.shortcode}/embed/`}
+                title={piece.title}
+                loading="lazy"
+                allowFullScreen
+              />
+            </div>
+            <figcaption>
+              <span>{piece.number}</span>
+              <span>{piece.title}</span>
+            </figcaption>
           </figure>
         ))}
       </div>

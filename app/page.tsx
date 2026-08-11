@@ -1,5 +1,6 @@
 import {
   AboutSection,
+  MotionSection,
   PhotogramsSection,
   SiteFooter,
   SiteHeader,
@@ -35,6 +36,7 @@ export default function Home() {
 
       <AboutSection />
       <WorkSection />
+      <MotionSection />
       <PhotogramsSection />
       <SiteFooter />
     </main>
