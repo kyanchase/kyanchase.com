@@ -13,6 +13,7 @@
 }
 
 html {
+  background: #101010;
   scroll-behavior: smooth;
 }
 
@@ -1001,26 +1002,34 @@ footer > a:last-child {
   .site-header {
     align-items: center;
     flex-direction: column;
-    gap: 1.15rem;
-    padding-top: 1.15rem;
+    gap: 0.7rem;
+    padding-bottom: 1.25rem;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-top: max(0.65rem, env(safe-area-inset-top));
   }
 
   .site-header .wordmark {
-    font-size: 1.05rem;
+    font-size: clamp(1.35rem, 6vw, 1.7rem);
     left: auto;
+    line-height: 1;
+    order: 2;
     position: relative;
     transform: none;
   }
 
   .home-page .site-header .wordmark {
-    font-size: 1.1rem;
+    font-size: clamp(1.5rem, 6.6vw, 1.85rem);
     top: auto;
     transform: none;
   }
 
   nav {
-    gap: 1.1rem;
+    gap: clamp(0.8rem, 4vw, 1.35rem);
+    justify-content: center;
     margin-left: 0;
+    order: 1;
+    width: 100%;
   }
 
   nav a {
@@ -1030,9 +1039,13 @@ footer > a:last-child {
     padding: 0 0.15rem;
   }
 
+  .site-header nav a {
+    font-size: clamp(0.61rem, 2.8vw, 0.72rem);
+  }
+
   .hero {
     min-height: 100svh;
-    padding: 5.5rem 1.4rem 7rem;
+    padding: calc(7.5rem + env(safe-area-inset-top)) 1.4rem calc(7rem + env(safe-area-inset-bottom));
   }
 
   .hero-image {
@@ -1041,7 +1054,7 @@ footer > a:last-child {
 
   .scroll-cue {
     min-height: 2.75rem;
-    bottom: 1rem;
+    bottom: max(1rem, env(safe-area-inset-bottom));
   }
 
   .hero-geometry span:first-child {
