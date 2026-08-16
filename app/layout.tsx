@@ -41,7 +41,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'document.querySelector(\'meta[name="viewport"]\')?.setAttribute("content", "width=device-width, initial-scale=1, viewport-fit=cover");',
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
