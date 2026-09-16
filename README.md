@@ -96,3 +96,12 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
 - [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+
+## HOW TO ADD A FRIENDS PHOTO
+
+Add JPG, PNG, or WebP files to `public/friends/`, then build and deploy.
+New photos automatically appear at the bottom. `order.json` remembers the order;
+if adding several at once, their filenames determine their order within that batch.
+Run `npm run build:pages` (GitHub builds on merge to main). Restart `npm run dev`
+after adding photos. Browsing copies are automatic; original downloads retain
+embedded metadata and original files are never overwritten.

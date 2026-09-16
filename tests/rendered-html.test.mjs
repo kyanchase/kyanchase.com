@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import test from 'node:test';
 import { contentPolicy } from '../scripts/secure-static-export.mjs';
 
-for (const route of ['', 'work/', 'motion/', 'photograms/']) {
+for (const route of ['', 'work/', 'motion/', 'photograms/', 'friends/']) {
   test(`export /${route} restricts scripts and retains portfolio content`, async () => {
     const html = await readFile(`out/${route}index.html`, 'utf8');
     assert.match(html, /Kyan Chase/);
@@ -40,4 +40,19 @@ test('policy does not authorize injected script content', () => {
   const altered = createHash('sha256').update('console.log("altered")').digest('base64');
   assert.ok(!policy.includes(altered));
   assert.ok(!policy.includes("script-src 'self' 'unsafe-inline'"));
+});
+
+test('Friends uses responsive browsing images and intact download targets', async () => {
+  const html = await readFile('out/friends/index.html', 'utf8');
+  assert.match(html, /<h1[^>]*>Friends<\/h1>/);
+  assert.match(html, /href="\/friends\/"/);
+  for (const [, attributes] of html.matchAll(/<img\b([^>]+)>/g)) {
+    assert.match(attributes, /src="\/friends-preview\//);
+    assert.match(attributes, /srcSet="/);
+    assert.match(attributes, /loading="lazy"/);
+  }
+  for (const [, href] of html.matchAll(/href="([^"]+)" download=/g)) {
+    await access(`out${decodeURIComponent(href)}`);
+    assert.deepEqual(await readFile(`out${decodeURIComponent(href)}`), await readFile(`public${decodeURIComponent(href)}`));
+  }
 });

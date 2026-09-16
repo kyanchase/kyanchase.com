@@ -1,3 +1,5 @@
+/* Full document links match the static export navigation throughout this site. */
+/* eslint-disable @next/next/no-html-link-for-pages */
 const photographs = [
   {
     src: "/work/01-architecture-curves.jpeg",
@@ -129,6 +131,7 @@ export function SiteHeader() {
         <a href="/work/">Work</a>
         <a href="/motion/">Motion</a>
         <a href="/photograms/">Photograms</a>
+        <a href="/friends/">Friends</a>
         <a href="/#about">About</a>
       </nav>
     </header>
