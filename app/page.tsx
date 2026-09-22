@@ -36,8 +36,8 @@ export default function Home() {
 
       <AboutSection />
       <WorkSection />
-      <MotionSection />
       <PhotogramsSection />
+      <MotionSection />
       <SiteFooter />
     </main>
   );

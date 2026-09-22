@@ -49,6 +49,12 @@ export default function RootLayout({
           }}
         />
         {children}
+        <script src="/photo-controls.js" defer />
+        <script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"4f2f57f4282d4ecdb513d1e0dac89992"}'
+        />
       </body>
     </html>
   );

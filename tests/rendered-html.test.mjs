@@ -8,6 +8,8 @@ for (const route of ['', 'work/', 'motion/', 'photograms/', 'friends/']) {
   test(`export /${route} restricts scripts and retains portfolio content`, async () => {
     const html = await readFile(`out/${route}index.html`, 'utf8');
     assert.match(html, /Kyan Chase/);
+    assert.equal([...html.matchAll(/src="https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js"/g)].length, 1);
+    assert.match(html, /data-cf-beacon="[^"]*4f2f57f4282d4ecdb513d1e0dac89992/);
     assert.doesNotMatch(html, /Your site is taking shape/);
     const policy = html.match(/http-equiv="Content-Security-Policy" content="([^"]+)"/)?.[1];
     assert.ok(policy);
@@ -17,6 +19,11 @@ for (const route of ['', 'work/', 'motion/', 'photograms/', 'friends/']) {
     for (const [, attributes, body] of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
       if (/\bsrc\s*=/.test(attributes)) {
         const src = attributes.match(/\bsrc="([^"]+)"/)?.[1];
+        if (src === 'https://static.cloudflareinsights.com/beacon.min.js') {
+          assert.ok(scriptPolicy.includes('https://static.cloudflareinsights.com'));
+          assert.ok(policy.includes("connect-src 'self' https://cloudflareinsights.com"));
+          continue;
+        }
         assert.ok(src?.startsWith('/') && !src.startsWith('//'));
         await access(`out${src}`);
       } else if (body) {
