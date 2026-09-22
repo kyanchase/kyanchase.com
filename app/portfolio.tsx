@@ -73,18 +73,18 @@ const photograms = [
 
 const motionPieces = [
   {
-    id: "0NZzHDZAY4o",
-    title: "Holy Cross 2V — Fall 2025",
-    number: "01",
-  },
-  {
     id: "kZ_E5kZpt1Q",
     title: "Canon ES8600 Snowboard Edit",
-    number: "02",
+    number: "01",
   },
   {
     id: "kFX31IhHYm0",
     title: "Zermatt, Switzerland",
+    number: "02",
+  },
+  {
+    id: "0NZzHDZAY4o",
+    title: "Holy Cross 2V — Fall 2025",
     number: "03",
   },
   {
@@ -97,27 +97,6 @@ const motionPieces = [
     title: "Garage Mix in a College Dorm — Kyan Chase B2B Jack Amyot",
     number: "05",
   },
-];
-
-const instagramThrowbacks = [
-  { shortcode: "CbMKr_RFzEp", title: "Waiting Room", number: "T01" },
-  {
-    shortcode: "CYOoQnnqpK3",
-    title: "New Year, Same Skiing",
-    number: "T02",
-  },
-  {
-    shortcode: "CXca2xclEn9",
-    title: "Silly Side Hitters ft. BFD",
-    number: "T03",
-  },
-  { shortcode: "CKM3wwAhtTW", title: "Throwback No. 4", number: "T04" },
-  {
-    shortcode: "CB6mzSeAY1Y",
-    title: "Making Cool Edits Again",
-    number: "T05",
-  },
-  { shortcode: "B4lZKJaAQja", title: "Slatt", number: "T06" },
 ];
 
 export function SiteHeader() {
@@ -151,11 +130,10 @@ export function AboutSection() {
         <h2 id="about-title">Kyan Chase</h2>
         <div className="about-copy">
           <p>
-            I&apos;m Kyan Chase, a photographer, videographer, and software
-            developer based in Salt Lake City. I enjoy exploring new ways of
-            making things—whether that&apos;s through film photography, darkroom
-            experimentation, music, or code. This website is a collection of
-            those projects as they continue to evolve.
+            I&apos;m Kyan Chase, a photographer, videographer, software developer,
+            and cybersecurity student based in Salt Lake City. I like skiing, snowboarding,
+            skateboarding, cycling, hiking, and being outside. I enjoy exploring
+            new ways of making things. This website is a collection of projects.
           </p>
           <div className="social-links" aria-label="Contact Kyan">
             <a
@@ -224,18 +202,13 @@ export function WorkSection({ standalone = false }: { standalone?: boolean }) {
         <span />
       </div>
       <div className="section-intro">
-        <p className="eyebrow">Selected work</p>
         {standalone ? (
           <h1 className="section-title" id="work-title">
-            Six photographs
+            Select Photos
           </h1>
         ) : (
-          <h2 id="work-title">Five selected photographs</h2>
+          <h2 id="work-title">Select Photos</h2>
         )}
-        <p>
-          Geometry, texture, and human traces—held together by the space around
-          them.
-        </p>
       </div>
 
       <div className={`gallery${standalone ? " gallery-full" : ""}`}>
@@ -272,21 +245,13 @@ export function PhotogramsSection({
         <span />
       </div>
       <div className="photograms-intro">
-        <p className="eyebrow">Darkroom experiments</p>
         {standalone ? (
           <h1 className="section-title" id="photograms-title">
-            Photograms
+            Photograms: Light captured onto paper
           </h1>
         ) : (
-          <h2 id="photograms-title">Photograms</h2>
+          <h2 id="photograms-title">Photograms: Light captured onto paper</h2>
         )}
-        <p>
-          Images made without a camera—using objects, folded paper, and liquid
-          materials directly on light-sensitive paper.
-        </p>
-        <p className="archive-note">
-          Working documentation · final scans forthcoming
-        </p>
       </div>
 
       <div className="photogram-grid">
@@ -323,7 +288,6 @@ export function MotionSection({ standalone = false }: { standalone?: boolean }) 
         <span />
       </div>
       <div className="motion-intro">
-        <p className="eyebrow">Moving images</p>
         {standalone ? (
           <h1 className="section-title" id="motion-title">
             Motion
@@ -331,9 +295,6 @@ export function MotionSection({ standalone = false }: { standalone?: boolean }) 
         ) : (
           <h2 id="motion-title">Motion</h2>
         )}
-        <p>
-          Video edits, travel films, and recorded DJ sets.
-        </p>
       </div>
 
       <div className="motion-grid">
@@ -357,30 +318,6 @@ export function MotionSection({ standalone = false }: { standalone?: boolean }) 
         ))}
       </div>
 
-      <div className="throwbacks-intro">
-        <p className="eyebrow">From the archive</p>
-        <h3>Throwbacks</h3>
-        <p>Early edits, experiments, and scenes worth keeping around.</p>
-      </div>
-
-      <div className="throwbacks-grid">
-        {instagramThrowbacks.map((piece) => (
-          <figure className="throwback-item" key={piece.shortcode}>
-            <div className="instagram-frame">
-              <iframe
-                src={`https://www.instagram.com/p/${piece.shortcode}/embed/`}
-                title={piece.title}
-                loading="lazy"
-                allowFullScreen
-              />
-            </div>
-            <figcaption>
-              <span>{piece.number}</span>
-              <span>{piece.title}</span>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
     </section>
   );
 }

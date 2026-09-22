@@ -8,12 +8,12 @@ export function contentPolicy(html) {
     .map(([, , body]) => `'sha256-${createHash('sha256').update(body).digest('base64')}'`);
   return [
     "default-src 'none'",
-    `script-src 'self' ${[...new Set(hashes)].join(' ')}`.trim(),
+    `script-src 'self' https://static.cloudflareinsights.com ${[...new Set(hashes)].join(' ')}`.trim(),
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data:",
     "font-src 'self'",
-    "connect-src 'self'",
-    "frame-src https://www.youtube-nocookie.com https://www.instagram.com",
+    "connect-src 'self' https://cloudflareinsights.com",
+    "frame-src https://www.youtube-nocookie.com",
     "object-src 'none'",
     "base-uri 'none'",
     "form-action 'none'",
