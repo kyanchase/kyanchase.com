@@ -12,25 +12,25 @@ export const metadata: Metadata = {
   description:
     "Selected black-and-white photographs by Kyan Chase, exploring form, light, texture, and negative space.",
   openGraph: {
-    title: "Kyan Chase — Form, Light & Space",
+    title: "Kyan Chase",
     description:
       "Selected black-and-white photographs exploring architecture, texture, and negative space.",
     type: "website",
     images: [
       {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Kyan Chase — Form, Light & Space",
+        url: "/share-photo.jpg",
+        width: 1232,
+        height: 1232,
+        alt: "Curving light and dark architectural walls against an open sky",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kyan Chase — Form, Light & Space",
+    title: "Kyan Chase",
     description:
       "Selected black-and-white photographs exploring architecture, texture, and negative space.",
-    images: ["/og.png"],
+    images: ["/share-photo.jpg"],
   },
 };
 
