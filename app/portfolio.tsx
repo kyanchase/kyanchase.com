@@ -159,27 +159,43 @@ export function AboutSection() {
               </span>
             </a>
             <a
-              href="https://www.instagram.com/kyan.mp4/"
+              href="https://www.youtube.com/@kyan_chase"
               target="_blank"
               rel="noreferrer"
-              aria-label="Kyan dot MP4 on Instagram, video edits"
+              aria-label="Kyan Chase on YouTube"
             >
-              <span className="instagram-mark" aria-hidden="true" />
+              <span className="youtube-mark" aria-hidden="true" />
               <span>
-                <strong>@kyan.mp4</strong>
-                <small>Video + edits</small>
+                <strong>@kyan_chase</strong>
+                <small>YouTube</small>
               </span>
             </a>
             <a
-              href="https://www.instagram.com/kyanscamera/"
+              href="https://soundcloud.com/kyanchase"
               target="_blank"
               rel="noreferrer"
-              aria-label="Kyan's Camera on Instagram, photography"
+              aria-label="Kyan Chase on SoundCloud"
             >
-              <span className="instagram-mark" aria-hidden="true" />
+              <svg width="22" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <path d="M2 12v4m3-6v7m3-9v10m3-11v11h8a4 4 0 0 0 0-8h-1a5 5 0 0 0-7-3Z" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
               <span>
-                <strong>@kyanscamera</strong>
-                <small>Photography</small>
+                <strong>kyanchase</strong>
+                <small>SoundCloud</small>
+              </span>
+            </a>
+            <a
+              href="https://www.mixcloud.com/kyanchase/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Kyan Chase on Mixcloud"
+            >
+              <svg width="22" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <path d="M14 17H6a4 4 0 0 1-1-8 5 5 0 0 1 9-1 4.5 4.5 0 0 1 0 9Zm4-8a6 6 0 0 1 0 8m3-10a9 9 0 0 1 0 12" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span>
+                <strong>kyanchase</strong>
+                <small>Mixcloud</small>
               </span>
             </a>
           </div>
