@@ -108,6 +108,7 @@ export function SiteHeader() {
       </a>
       <nav aria-label="Main navigation">
         <a href="/work/">Work</a>
+        <a href="/shop/">Shop</a>
         <a href="/motion/">Motion</a>
         <a href="/photograms/">Photograms</a>
         <a href="/friends/">Friends</a>
