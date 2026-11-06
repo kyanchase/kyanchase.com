@@ -1,0 +1,47 @@
+.shop {
+  background: #171715;
+  color: var(--paper);
+}
+
+.shop > :global(.site-header) {
+  position: relative;
+}
+
+.gallery {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin: 0 auto;
+  max-width: 82rem;
+  padding: clamp(0.75rem, 2vw, 1.75rem) var(--pad) 3.5rem;
+}
+
+.installation {
+  height: auto;
+  width: 100%;
+}
+
+.prints {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.prints h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  margin: 0;
+}
+
+.prints a {
+  color: #ccc6ba;
+  display: inline-block;
+  font-size: 0.82rem;
+  margin-top: 0.35rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
