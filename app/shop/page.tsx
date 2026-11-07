@@ -16,6 +16,10 @@ export default function ShopPage() {
       <h1 className="visually-hidden">Print Shop</h1>
 
       <section className={styles.gallery} aria-label="Prints">
+        <p className={styles.printDetails}>
+          Photographed on medium-format film with a Ciro-flex. Each 24″ × 24″
+          print is mounted in a 26″ × 26″ clear acrylic frame.
+        </p>
         <img
           className={styles.installation}
           src="/shop/acrylic-installation.webp"
