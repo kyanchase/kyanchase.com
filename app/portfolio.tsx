@@ -73,29 +73,34 @@ const photograms = [
 
 const motionPieces = [
   {
+    id: "7q3otm577vI",
+    title: 'Holy Cross Men\'s Rowing: "For Each Other"',
+    number: "01",
+  },
+  {
     id: "kZ_E5kZpt1Q",
     title: "Canon ES8600 Snowboard Edit",
-    number: "01",
+    number: "02",
   },
   {
     id: "kFX31IhHYm0",
     title: "Zermatt, Switzerland",
-    number: "02",
+    number: "03",
   },
   {
     id: "0NZzHDZAY4o",
     title: "Holy Cross 2V — Fall 2025",
-    number: "03",
+    number: "04",
   },
   {
     id: "pjRdRqaY3uI",
     title: "Kyan Chase B2B Brandon Chase — House Music at the Tree House",
-    number: "04",
+    number: "05",
   },
   {
     id: "Lw0_C670wqY",
     title: "Garage Mix in a College Dorm — Kyan Chase B2B Jack Amyot",
-    number: "05",
+    number: "06",
   },
 ];
 
